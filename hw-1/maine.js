@@ -20,7 +20,7 @@ console.log(allSumFloor);
 
 // Сума округлена до сотень
 allSumRound = Math.round(allSum/100)*100;
-console.log(allSum);
+console.log(allSumRound);
 
 // Чи є число парне 
 let isEven = allSumFloor % 2 === 0;
