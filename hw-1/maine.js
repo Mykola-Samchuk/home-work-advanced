@@ -27,28 +27,30 @@ let isEven = allSumFloor % 2 === 0;
 console.log(`Total sum of all products is ${isEven} number`)
 
 // Сума Решти 
-let sumrest = 500 - allSum;
+let paySum = 500;
+let sumrest = paySum  - allSum;
 console.log(sumrest);
 
 // Середнє значення округлене до 2-го знаку
-let averageSum = (allSum / 3).toFixed(2);
+let averageSum = Number((allSum / 3).toFixed(2));
 console.log(averageSum);
 
 // Задача
 //Випадкова знижка
- let discount = (Math.random()*100).toFixed(2);
+ let discount = Number((Math.random()*100).toFixed(2));
+ 
  console.log(discount);
  
 //  Сума знижки
- let discountPrice = ((allSum * discount)/100).toFixed(2);
+ let discountPrice = Number(((allSum * discount)/100).toFixed(2));
  console.log(discountPrice);
 
 //  Cума до оплати
-console.log((allSum - discountPrice).toFixed(2));
+console.log(Number((allSum - discountPrice).toFixed(2)));
 
 
 // Прибуток
- const profit = ((allSum / 2) - discountPrice).toFixed(0);
+ const profit = Number(((allSum / 2) - discountPrice).toFixed(0));
  console.log(profit);
 
 
@@ -64,7 +66,7 @@ console.log(
     Сума решти при оплаты товару 500: ${sumrest}
     Середнє значення цін: ${averageSum}
     Випадкова знижка в % : ${discount}%
-    Сума до оплати : ${((allSum - discountPrice).toFixed(2))}
+    Сума до оплати : ${Number(((allSum - discountPrice).toFixed(2)))}
     Чистий прибуток : ${profit}
  ` 
 
