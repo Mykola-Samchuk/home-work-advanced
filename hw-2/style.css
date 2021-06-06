@@ -1,0 +1,29 @@
+body{
+    background-color: rgb(35, 87, 39);
+    font-family: 'Courier New', Courier, monospace;
+}
+h1,h2,h3{
+    margin: 0;
+}
+.info{
+    border: 1px solid;
+    border-radius: 5px;
+    box-shadow: 0 0 19px 9px rgb(167 231 170 / 20%);
+    color: #a5ff9e;
+    width: 50%;
+    margin: 5em auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+h1{
+    margin-top: 1em;
+}
+.task{
+    padding: 0.5em 2em 1em 2em;
+}
+#totalSum{
+    margin: 0 0 0.5em 0;
+    font-size: 3em;
+}
