@@ -3,13 +3,21 @@ let n = Number(prompt(`Pleas enter the first number`, 0));
 let m = Number(prompt(`Pleas enter the first number`, 0));
 
 // Перевіряємо чи переведене число не NaN , якщо NaN то просимо ввести коректне число
-while( isNaN(n) || isNaN(m)){
+while( isNaN(n) || isNaN(m) ){
      n = Number(prompt(`Pleas enter the first CORRECTED number`, 0));
      m = Number(prompt(`Pleas enter the second CORRECTED number`, 0));
 }
+// Перевіряємо чи число ціле,якщо ні, просимо ввесто знову
+while( !Number.isInteger(n) || !Number.isInteger(m) ){
+     n = Number(prompt(`Pleas enter the first CORRECTED number (integer)`, 0));
+     m = Number(prompt(`Pleas enter the second CORRECTED number (integer)`, 0));
+
+}
+/* Забрав після коментаря в TRELLO Volodymyr Pavlyk 
 // Відкидаємо не ціле
-n = Math.trunc(n);
-m = Math.trunc(m);
+// n = Math.trunc(n);
+// m = Math.trunc(m);
+*/
 
 // Чи пропускати парні числа?
 let evenNumber = confirm(`Skip even numbers??`);
