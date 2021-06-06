@@ -10,7 +10,8 @@ h1,h2,h3{
     border-radius: 5px;
     box-shadow: 0 0 19px 9px rgb(167 231 170 / 20%);
     color: #a5ff9e;
-    width: 50%;
+    width: 90%;
+    text-align: center;
     margin: 5em auto;
     display: flex;
     align-items: center;
