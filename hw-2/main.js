@@ -12,7 +12,7 @@ n = Math.trunc(n);
 m = Math.trunc(m);
 
 // Чи пропускати парні числа?
-let evenNumber = confirm(`Consider even numbers?`);
+let evenNumber = confirm(`Skip even numbers??`);
 console.log( `Значення ${evenNumber}`);
 
 // Знаходимо максимальне та мінімальне число
