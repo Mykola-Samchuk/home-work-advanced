@@ -22,12 +22,18 @@ btnOne.onclick = function(){
 // Task 2: Створити функцію, яка визначає ступінь числа. Не використовуючи Math.pow та **. Використовуйте цикл
 
 function getPow(x, y){
-   
+   y = Number(y)
+   x = Number(x)
    let numberPow = x
+
+   if(y == 0){
+      numberPow /= numberPow
+   }
 
    for(let i = 1; i<y; ++i){
       numberPow *= x
    }
+   
    return numberPow
 }
 
@@ -80,9 +86,10 @@ btnFour.onclick = function(){
 // Task 5: Створити функцію, яка повертає випадкове ціле число в діапазоні від N до M.
 
 function getRandomNumber(min, max){
-  
+  const numberMax = Math.max(min, max)
+  const numberMin = Math.min(min, max)
    // let randomNumber = Math.floor(Math.random() * (max - min) ) + min;
-   return Math.floor(Math.random() * (max - min) + min);
+   return Math.floor(Math.random() * (numberMax - numberMin) + numberMin);
 
 }
 getRandomNumber()
@@ -117,8 +124,8 @@ function countLetter(letter, word){
 }
 
 
-let inputLetter = document.getElementById(`input_letter_six`);
-let inputWord = document.getElementById(`input_word_six`);
+let inputLetter = document.getElementById(`input_word_six`);
+let inputWord = document.getElementById(`input_letter_six`);
 let btnTskSix = document.getElementById(`button_tsk_six`);
 
 btnTskSix.onclick = function(){
