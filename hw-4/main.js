@@ -18,7 +18,7 @@ function getPairs(students){
 }
 
 
-console.log(getPairs(students))
+console.log('Arrays with pairs of students', getPairs(students))
 
 function getStudentsThemes(themes){
 
@@ -31,7 +31,7 @@ function getStudentsThemes(themes){
     return studentsPairs
 }
 
-console.log(getStudentsThemes(themes))
+console.log(`Arrays with pairs of students and tasks`, getStudentsThemes(themes))
 
 function getMarksStudens(students, marks){
     
@@ -43,24 +43,17 @@ function getMarksStudens(students, marks){
     return marksStudents
 
 }
-console.log(getMarksStudens(students, marks))
+console.log( 'Arrays with students and grades', getMarksStudens(students, marks))
 
-function getRandomIntInclusive(min, max) {
-    min = Math.ceil(1);
-    max = Math.floor(5);
-    return Math.floor(Math.random() * (max - min + 1)) + min; //Максимум и минимум включаются
-  }
-console.log(getRandomIntInclusive())
 
 function getPairsMarks(){
 
-    const randomMarks = getRandomIntInclusive();
-    const pairsStudents = getStudentsThemes(themes);
-    const pairsMarks = []
-    for(let i=0; i<pairsStudents.length; i++){
-        pairsMarks.push([pairsStudents[i],randomMarks])
-    }
-    return pairsMarks
+    const pairsStudentsThemes = getStudentsThemes(themes);
+
+    pairsStudentsThemes.map(function(item){
+        item.push(Math.ceil(Math.random() * 5));
+    })
+    return pairsStudentsThemes
+    
 }
-console.log(getPairsMarks())
-getPairsMarks()
+console.log(`Arrays of pairs students with marks`, getPairsMarks())
