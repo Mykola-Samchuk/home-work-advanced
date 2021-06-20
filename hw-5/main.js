@@ -29,36 +29,7 @@ function getRandomArray(length, min, max){
     return arrNumber;
 }
 
-console.log(`Task 1:Повертаємо випадкові числа від і до = ` + getRandomArray(10, 1, 20));
-
-
-// Task 2: Створіть функцію getModa(...numbers) – яка вираховує моду всіх переданих в неї аргументів. НЕЦІЛІ ЧИСЛА ІГНОРУЮТЬСЯ Приклад: getModa(6, 2, 55, 11, 78, 2, 55, 77, 57, 87, 23, 2, 56, 3, 2) –> 2
-
-/*function getModa(...numbers){
-
-    numbers = [6,2,2,2,6,3]
-    l(numbers)
-    let filteredNumbers  = getIntegers(...numbers)
-    l(filteredNumbers)
-    let moda = []
-    l(moda)
-    
-    filteredNumbers.forEach(function(item){
-       
-        if(typeof moda[item] == `undefined`) {
-            moda[item] = 1
-        } else {
-            moda[item] = moda[item] + 1
-            
-        }
-        
-        
-    })
-    
-}
-getModa();
-*/
-
+console.log(`Task 1: Повертаємо випадкові числа від і до = ` + getRandomArray(10, 1, 20));
 
 // Task 3:Створіть функцію getAverage(...numbers) – яка рахує середнє арифметичне всіх переданих в неї аргументів. НЕЦІЛІ ЧИСЛА ІГНОРУЮТЬСЯ
 
@@ -69,17 +40,15 @@ function getAverage(...numbers){
     let count = 0;
 
     numbers.forEach(function(itemOfArr){
-            if(Number.isInteger(itemOfArr)){
-                filteredNumbers.push(itemOfArr);
-                sum += itemOfArr;
-                count += 1;
-            }; 
+        
+        if(Number.isInteger(itemOfArr)){
+        filteredNumbers.push(itemOfArr);
+        sum += itemOfArr;
+        count += 1;
+        }; 
     });
-   
     return sum / count;
-
 }
-
 console.log(`Task 3: Повертаємо середнє арифметичне = `,getAverage(6, 2, 55, 11, 78, 2, 55, 77, 57, 87, 23, 2, 56, 3, 2));
 
 // Task 5: Створіть функцію filterEvenNumbers(...numbers) – яка фільтрує парні числа передані як аргументи функції Приклад: filterEvenNumbers(1, 2, 3, 4, 5, 6) -> [1, 3, 5]
@@ -92,10 +61,8 @@ function filterEvenNumbers(...numbers){
         if(item % 2){
             result.push(item);
         }
-        
     })
     return result;
-    
 }
 console.log(`Task 5: Виводим відфільтровані не парні числа = `,filterEvenNumbers(1, 2, 3, 4, 5, 6));
 
@@ -107,8 +74,6 @@ function countPositiveNumbers(...numbers){
         return item > 0;
     })
     return filterNumber.length;
-    
-
 }
 console.log(`Task 6: Виводим кількість значень > 0 =`,countPositiveNumbers(1, -2, 3, -4, -5, 6));
 
@@ -122,10 +87,8 @@ function getDividedByFive(...numbers){
         if(Number.isInteger(sum)){
             dividedByFive.push(item);
         }
-        
     })
     return dividedByFive;
-
 }
 console.log(`Task 7: Виводим всі числа, що ціло діляться на 5 =`, getDividedByFive(6, 2, 55, 11, 78, 2, 55, 77, 57, 87, 23, 2, 56, 3, 2));
 
@@ -134,7 +97,6 @@ console.log(`Task 7: Виводим всі числа, що ціло ділят�
 function divideByThree(word){
     
     const toLower = word.toLowerCase().split(' ').join('');
-
     const wordThree = [];
 
     for(let i = 0; i < toLower.length; i+=3){
@@ -146,6 +108,7 @@ function divideByThree(word){
     }
 
     return wordThree;
-
 }
 console.log(`Task 9: Виводим слова розбиті на 3 = `, divideByThree('Commander'))
+
+
