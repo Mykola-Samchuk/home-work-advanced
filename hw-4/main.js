@@ -22,15 +22,14 @@ console.log('Arrays with pairs of students', getPairs(students))
 
 function getStudentsThemes(themes){
 
-    const studentsPairs =  getPairs(students);
-    // console.log(studentsPairs)
+    const studentsPairs = getPairs(students);
+    const studentThemes = [];
+    for(let i = 0; i < themes.length; i++){
+        studentThemes.push([studentsPairs[i][0] + ` i ` + studentsPairs[i][1] , themes[i]]);
+    };
+    return studentThemes;
     
-        studentsPairs[0].splice(2, 0,  themes[0])
-        studentsPairs[1].splice(2, 0,  themes[1])
-        studentsPairs[2].splice(2, 0,  themes[2])
-    return studentsPairs
 }
-
 console.log(`Arrays with pairs of students and tasks`, getStudentsThemes(themes))
 
 function getMarksStudens(students, marks){
