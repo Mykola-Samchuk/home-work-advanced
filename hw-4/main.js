@@ -37,8 +37,8 @@ function getMarksStudens(students, marks){
     
     const marksStudents = []
 
-    for(let i=0; i<students.length; i++){
-        marksStudents.push([students[i],marks[i]])
+    for(let i = 0; i < students.length; i++){
+        marksStudents.push([students[i], marks[i]])
     }
     return marksStudents
 
