@@ -1,0 +1,22 @@
+.list{
+    
+    margin: 0 auto;
+    width: 80%;
+    height: 300px;
+    background-color: yellowgreen;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.list-elem{
+    list-style: none;
+    width: 70px;
+    height: 70px;
+    background-color: violet;
+    transition: all 0.07s;
+}
+.playing{
+    transform: scale(1.1);
+    box-shadow: 0 0 10px black;
+}
+
