@@ -1,22 +1,51 @@
-.list{
-    
-    margin: 0 auto;
-    width: 80%;
-    height: 300px;
-    background-color: yellowgreen;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+body {
+  background-image: url(./img/UmezCJN.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
 }
-.list-elem{
-    list-style: none;
-    width: 70px;
-    height: 70px;
-    background-color: violet;
-    transition: all 0.07s;
+h1 {
+  margin: 1em 0;
+  text-align: center;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-size: 3em;
+  color: rgb(19, 14, 5);
 }
-.playing{
-    transform: scale(1.1);
-    box-shadow: 0 0 10px black;
+.list {
+  margin: 0 auto;
+  width: 80%;
+  height: 300px;
+  background-color: #8668408f;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+.list-elem {
+  width: 100px;
+  height: 100px;
+  background-color: #211606c4;
+  border-radius: 30px;
+  transition: all 0.07s;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: blanchedalmond;
+  font-size: 50px;
+}
+.playing {
+  transform: scale(1.1);
+  box-shadow: 0 0 10px black;
 }
 
+audio {
+  display: none;
+}
+
+/* .list-btn{
+    color: blanchedalmond;
+    font-size: 50px;
+} */
+.list-elem:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 10px black;
+}
