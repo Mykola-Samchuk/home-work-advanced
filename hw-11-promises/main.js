@@ -1,10 +1,9 @@
 async function getRandomChinese(length){
-
+    
     let res = ``;
 
     for(i = 0; i < length; i++){
       let getPromise = new Promise((resolve, reject)=>{
-          
         setTimeout(() => {
              let sign = Date.now().toString().slice(-5);
              let signString = String.fromCharCode(sign);
@@ -13,11 +12,9 @@ async function getRandomChinese(length){
           }, 50*length);
       })
       res += await getPromise;
-      
     }
-    
-    console.log(res)
+    return res
 }
 
 
-getRandomChinese(4)
+console.log(getRandomChinese(4))
