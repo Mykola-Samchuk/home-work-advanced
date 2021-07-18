@@ -1,24 +1,36 @@
 const users = document.getElementById(`users-list`)
-const baseUrl = `https://swapi.dev/api/films/2/`
-function createTemplate(){
-    return `
-    <div class="character-item">
-        <h2 class="character-name"></h2>
-        <span class="character-birthday"></span>
-        <span class="sex"></span>
-    </div>
-    `
-}
 
-fetch(baseUrl)
-    .then(function(response){
-        return response.json()
-    })
-    .then(function(data){
-            data.characters.forEach((item)=>{
-                console.log(item)
-            })
-    
-    })
-    
-    
+const baseUrl = `https://swapi.dev/api/films/2/`
+
+
+
+function getUsers(){
+
+    const res = fetch(`https://swapi.dev/api/films/2/`)
+
+        .then(function (response){
+            return response.json()
+        })
+        .then(function (data){
+            const users = data.characters
+            console.log(users)
+            users.forEach(item => {
+                fetch(item)
+                .then(function (response){
+                    return response.json()
+                })
+                .then(function(data){
+                    console.log(data)
+                })
+            });
+        })
+        
+        
+}
+getUsers()
+
+// function showUsers(){
+//     const users = getUsers()
+//     console.log(users)
+// }
+// showUsers()
