@@ -1,42 +1,63 @@
 body {
+  height: 100%;
   background-image: url(./img/star-wars-the-clone-wars-kapitan-reks-oboi-1920x1080_48.jpg);
   background-repeat: no-repeat;
   background-position-x: center;
+  background-color: black;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
-.character-item, .planet-item{
+.character-item,
+.planet-item,
+.planets-next {
   margin: 20px;
-  background-color: black;
+  background-color: rgb(35, 33, 41);
   border-radius: 30px;
   opacity: 0.8;
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
   align-items: center;
   flex-wrap: wrap;
-  
 }
-.user, .planet {
-  margin: 1em;
+.user,
+.planet {
+  margin: 10px;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: space-around;
   color: white;
 }
-.btn{
-    padding: 1em;
-    margin: 1em;
-    background-color: rgb(58, 50, 50);
-    color: white;
-    font-size: 1em;
-    border-radius: 30px;
-    outline: none;
-    border: 0;
-    opacity: 0.8;
-    
+.btn-planet{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  display: none;
 }
-.btn:hover{
-    opacity: 0.5;
+.btn {
+  padding: 1em;
+  margin: 1em;
+  background-color: rgb(58, 50, 50);
+  color: white;
+  font-size: 1em;
+  border-radius: 30px;
+  outline: none;
+  border: 0;
+  opacity: 0.8;
+}
+#planet-next, #planet-previous{
+  font-size: 0.8em;
+}
+.btn:hover {
+  opacity: 0.5;
+
+}
+@media (max-width: 360px) {
+  .user,
+  .planet {
+    margin: 0;
+    padding: 5px;
+    
+  }
 }
