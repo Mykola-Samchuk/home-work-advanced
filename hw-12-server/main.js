@@ -12,13 +12,13 @@ let listPlanet = document.querySelector(`.planet-item`);
 
 users.addEventListener(`click`, getUsers);
 planets.addEventListener(`click`, ()=>{
-    listPlanet.innerHTML = ``
+    listPlanet.innerHTML = ` `
     getPlanets(planetsUrl)
 });
 
 planetsNext.addEventListener(`click`, function getNext(){
-    if(getPage <6){
-        listPlanet.innerHTML =``
+    if(getPage < 6){
+        listPlanet.innerHTML = ` `
         getPage += 1
         getPlanets(planetsUrl + getPage)
     };
@@ -26,10 +26,15 @@ planetsNext.addEventListener(`click`, function getNext(){
 
 planetsPrevious.addEventListener(`click`, function getPrev(){
     if(getPage <= 6){
-        listPlanet.innerHTML =``
+        listPlanet.innerHTML = ` `
         getPage -= 1
         getPlanets(planetsUrl + getPage)
+        
     };
+    if(getPage <= 0){
+        document.querySelector(`.btn-planet`).style.display=`none`
+    };
+    
 });
 
 
@@ -45,12 +50,14 @@ async function getUsers(){
         let response = await fetch(character);
         character = await response.json();
 
-        listUser.innerHTML+=`
+        listUser.innerHTML += `
+
         <div class="user">
         <h2 class="character-name">${character.name}</h2>
         <span class="character-birthday">${character.birth_year}</span>
         <span class="sex">${character.gender}</span>
         </div>
+
         `;
     };
     
