@@ -11,7 +11,10 @@ let listPlanet = document.querySelector(`.planet-item`);
 
 
 users.addEventListener(`click`, getUsers);
-planets.addEventListener(`click`, ()=>{getPlanets(planetsUrl)});
+planets.addEventListener(`click`, ()=>{
+    listPlanet.innerHTML = ``
+    getPlanets(planetsUrl)
+});
 
 planetsNext.addEventListener(`click`, function getNext(){
     if(getPage <6){
