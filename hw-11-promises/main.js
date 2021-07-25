@@ -13,8 +13,8 @@ async function getRandomChinese(length){
       })
       res += await getPromise;
     }
-    return res
+    console.log(res)
+
 }
 
-
-console.log(getRandomChinese(4))
+getRandomChinese(4)
