@@ -1,0 +1,28 @@
+body {
+  background-color: rgb(85, 59, 34);
+}
+.block {
+  display: flex;
+  flex-direction: column;
+}
+
+.cnsl {
+  text-align: center;
+  color: #eddb9c;
+}
+.btn-block {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+span {
+  color: burlywood;
+  font-size: 1em;
+}
+.btn {
+  background-color: burlywood;
+  border-radius: 5px;
+  margin: 10px;
+  box-shadow: 0px 1px 4px 7px rgb(255 193 7 / 39%);
+}
