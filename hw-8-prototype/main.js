@@ -1,7 +1,4 @@
-function l(value){
-     console.log(value);
-};
- 
+
     // Task 1: У стдентів повинні бути наступні властивості: university, course, fullName, вони передаються при створенні студента(в конструктор).
 class Student {
 
@@ -24,7 +21,7 @@ class Student {
     // Task 3: Створіть геттер оцінок this.marks, який повертає масив оцінок студента [5, 4, 4, 5]
    get getMarks(){
 
-       if(this.activeStudent = true){
+       if(this.activeStudent){
         return this.marks;
        }
        else return null;
@@ -94,4 +91,3 @@ class BudgetStudent extends Student {
 
 const igor = new BudgetStudent (`Вищої Школи Психотерапії`,1,`Ігор Бендер`);
 igor.marks = [5, 4, 4, 5];
-igor.getScholarship();
